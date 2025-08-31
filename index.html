@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/shirokokoro.png" type="image/x-icon">
+    <title>Gemini Chats to Markdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gemini Chat to Markdown Converter</h1>
+        <p>Convert your Google AI Studio chat into clean Markdown format directly in your browser.</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <label for="jsonInput">Select Gemini Chat JSON Files:</label>
+            <input type="file" id="jsonInput" multiple>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="excludeUser"> Exclude User Prompts
+                    <span class="tooltip-icon" title="If checked, the 'user' role text will not be included in the Markdown output. Only '# Question X' will appear.">?</span>
+                </label>
+                <label>
+                    <input type="checkbox" id="includeThought"> Include Thought Blocks
+                    <span class="tooltip-icon" title="If checked, AI internal 'thought' blocks will be included in the Markdown output.">?</span>
+                </label>
+            </div>
+
+            <button id="convertButton">Convert to Markdown</button>
+        </div>
+
+        <div id="status" class="status-message"></div>
+        <div id="downloads-info" class="status-message"></div>
+
+        <section class="instructions">
+            <p>All operations happen on your browser, no data is logged or saved.</p>
+            <h2>How to Use:</h2>
+            <ol>
+                <li>Download your AIStudio Chat (History -> Gdrive )</li>
+                <li>Select one or more Gemini Chat files.</li>
+                <li>Check "Exclude User Prompts" if you only want the AI's responses.</li>
+                <li>Check "Include Thought Blocks" if you want to see the AI's CoT.</li>
+                <li>Click "Convert to Markdown".</li>
+                <li>Your browser will automatically download the converted <code>.md</code> files.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with ❤️ and JavaScript for client-side conversion.</p>
+        <div class="footer-branding">
+            <img src="/kurokokoro.png" class="footer-logo">
+            <span>by <a href="https://ayghri.com" target="_blank" rel="noopener noreferrer">Ayghri.com</a></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
