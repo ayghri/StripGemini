@@ -1,10 +1,13 @@
 # StripGemini
 
-A tool to convert Gemini chat files from Google's AI Studio to Markdown (.md) files. This can be done either through a simple web interface or a Python script.
+A tool to convert Google AI Studio chat files (json) to Markdown (.md) .
+This can be done either through a simple client-side web page or a Python script.
 
 ## Web Interface (Client-Side)
 
-A hosted page is available at [StipGemini](https://stripgemini.ayghri.com).
+A hosted page is available at [StripGemini](https://stripgemini.ayghri.com).
+
+Conversion happens on the browser (client-side), nothing is logged or tracked.
 
 ### Local use
 

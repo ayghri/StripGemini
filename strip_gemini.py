@@ -131,7 +131,7 @@ def main():
         )
         sys.exit(1)
 
-    print(f"\n--- Summary ---")
+    print("\n--- Summary ---")
     print(f"Total files processed successfully: {processed_count}")
     if skipped_count > 0:
         print(
