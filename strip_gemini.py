@@ -11,7 +11,7 @@ def extract_md(data, exclude_user=False, include_thought=False):
     qst = 1
     for c in data.get("chunkedPrompt", {}).get("chunks", []):
         if c.get("role", "") == "user":
-            md_entries.append(f"# Question {qst}")
+            md_entries.append(f"# Prompt {qst}")
             qst += 1
             if not exclude_user:
                 md_entries.append(c.get("text", ""))

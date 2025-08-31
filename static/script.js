@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (const c of chunks) {
             if (c.role === "user") {
-                mdEntries.push(`# Question ${qst}`);
+                mdEntries.push(`# Prompt ${qst}`);
                 qst += 1;
                 if (!excludeUser) {
                     mdEntries.push(c.text);
